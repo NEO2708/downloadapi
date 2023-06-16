@@ -74,25 +74,6 @@ def download_video():
                     })
 
 
-def download(video_url):
-    yt = YouTube(video_url)
-    yd = yt.streams.get_by_resolution(resolution="360p")
-    yd.download("/Users/rangolivision/Desktop/code/web-ytmp3-ins/ytd/360p/")
-    yd = yt.streams.get_by_itag(itag="135")
-    filesize = yd.filesize_mb
-    yd.download("/Users/rangolivision/Desktop/code/web-ytmp3-ins/ytd/480p/")
-    yd = yt.streams.get_by_resolution(resolution="720p")
-    filesize = yd.filesize_mb
-    yd.download("/Users/rangolivision/Desktop/code/web-ytmp3-ins/ytd/720p/")
-    yd = yt.streams.get_by_itag(itag="137")
-    filesize = yd.filesize_mb
-    yd.download(
-        "/Users/rangolivision/Desktop/code/web-ytmp3-ins/ytd/1080p/")
-    yd = yt.streams.get_audio_only()
-    yd.download(
-        "/Users/rangolivision/Desktop/code/web-ytmp3-ins/ytd/audio/")
-
-
 @app.route('/insta', methods=['GET'])
 def download_post():
     L = instaloader.Instaloader()
