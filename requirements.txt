@@ -3,6 +3,7 @@ fastapi==0.97.0
 Flask==2.2.2
 Flask-Cors==3.0.10
 instabot==0.117.0
+pytube
 instagram-private-api==1.6.0.0
 instaloader==4.9.5
 pydub==0.25.1
